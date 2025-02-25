@@ -1,0 +1,25 @@
+{
+    "$id": "https://example.com/coche.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Coche",
+    "type": "object",
+    "required": ["modelo"],
+    "properties": {
+        "modelo": {
+            "type": "string",
+            "description": "El modelo del coche"
+        },
+        "annadidos" : {
+            "type": "array",
+            "description": "Los añadidos del coche",
+            "items": {
+                "type": "string"
+            }   
+        },
+        "precio": {
+            "type": "number",
+            "minimum": 1000,   
+            "description": "El precio del coche"
+        }
+    }
+}

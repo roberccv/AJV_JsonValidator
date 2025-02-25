@@ -1,0 +1,22 @@
+{
+    "$id": "https://example.com/helado.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Helado",
+    "type": "object",
+    "required": ["sabor", "precio"],
+    "properties": {
+        "sabor": {
+            "type": "string",
+            "description": "El sabor del helado",
+            "enum" : ["turrón","vainilla", "fresa", "menta"]
+        },
+        "precio": {
+            "type": "number",
+            "description": "El precio del helado"
+        },
+        "barquillo Sin Gluten" : {
+            "type": "boolean",
+            "description": "Indica si el barquillo es sin gluten"
+        }
+    }
+}
