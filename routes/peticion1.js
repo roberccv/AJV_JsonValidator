@@ -15,9 +15,11 @@ router.post('/', function(req, res, next) {
   const json = req.body;
   const schema = "coche";
   if(validateSchema(json, schema)){
-    res.status(200).send("El helado es válido");
+    res.status(200).send("El coche es válido");
   } else {
-    res.status(400).send("El helado no es válido");
+    console.log(json);
+    console.log(ajv.errors);
+    res.status(400).send("El coche no es válido");
   }
 });
 
